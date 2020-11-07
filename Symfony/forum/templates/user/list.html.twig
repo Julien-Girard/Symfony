@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PersonneController!{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+    <h1>Hello! ✅</h1>
+    <table>
+    	<tr>
+    		<th>ID</th>
+    		<th>Pseudo</th>
+    		<th>Password</th>
+    		<th>Date Création</th>
+    		<th>A propos</th>
+    		<th>Lecture</th>
+    		<th>Ajout Theme</th>
+    		<th>Ajout Message</th>
+    		<th>Moderateur</th>
+    		<th>Suppression Thme</th>
+    		<th>Suppression Message</th>
+    		<th>Modifier</th>
+    		<th>Supprimer</th>
+		{%  for i in resUser %} 
+		<tr>
+			<th>Utilisateur {{ i.id }}</li>
+			<th>{{ i.pseudo }}</li>
+			<th>{{ i.passwd }}</li>
+			<th>{ {{ i.date|date}} </li>
+			<th>{{ i.about }}</li>
+			{%  for role in res %} 
+				<th>{%  if  role in i.roles %}oui{% else %}non{% endif %}</th>
+			{% endfor %}
+			<th><a href="/user/update/{{i.id}}">Modifier</a></th>
+			<th><a href="/user/delete/{{i.id}}">Supprimer</a></th>
+			</th>
+		</tr>
+		{% endfor %}
+    </table>
+</div>
+{% endblock %}

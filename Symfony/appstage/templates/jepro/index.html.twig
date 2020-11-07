@@ -1,0 +1,27 @@
+    {% block body %}
+    <link href="site.css" rel="stylesheet"></link>
+    {#                        PARTIE MENU/ASIDE                        #}
+    {#-----------------------------------------------------------------#}
+   	<aside>
+    	<div>
+   			<div id="haut">
+    			<img src="img/alie.svg" class="logo"></img>
+    			<h1 class="titre">{{ page_name }}</h1>
+   			</div>
+    
+    		<p class="sep"></p>
+    
+    		<div id="info_user">
+    			<img src="img/user.png" class="user_img"></img>
+    			<div class="a">
+    				<p class="user">{{ nom }} {{ prenom }}</p>
+    				<p><a class="action" href="">Modifier</a><a class="action" href="">Déconnexion</a></p>
+   				</div>
+    		</div>
+    		
+    		<div id="btns">
+				<a class="btn-stage" href="">Stage</a>
+    		</div>
+    	</div>
+    </aside>
+    {% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Titre{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+	<h1>Personne à entrer :</h1>
+{{ form_start(formulaire) }}
+{{ form_label(formulaire.nom) }}
+{{ form_widget(formulaire.nom) }}
+<p>
+{{ form_label(formulaire.prenom) }}
+{{ form_widget(formulaire.prenom) }}
+</p>
+{{ form_label(formulaire.date_de_naissance) }}
+{{ form_widget(formulaire.date_de_naissance) }}
+</p>
+{{ form_label(formulaire.niveau) }}
+{{ form_widget(formulaire.niveau) }}
+</p>
+{{ form_label(formulaire.mail) }}
+{{ form_widget(formulaire.mail) }}
+</p>
+{{ form_label(formulaire.valider) }}
+{{ form_widget(formulaire.valider) }}
+{{ form_end(formulaire) }}
+</div>
+{% endblock %}
+
+

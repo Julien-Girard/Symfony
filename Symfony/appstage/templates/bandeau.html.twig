@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+  
+ <body>   
+    
+    {#                        PARTIE MENU/ASIDE                        #}
+    {#-----------------------------------------------------------------#}
+   	<aside class="menu">
+    	<div>
+   			<div id="haut">
+    			<img src="/img/alie.svg" class="logo"></img>
+    			<h1 class="titre">Titre de la page</h1>
+   			</div>
+    
+    		<p class="sep"></p>
+    
+    		<div id="info_user">
+    			<img src="/img/user.png" class="user_img"></img>
+    			<div class="infos">
+    				<p class="user">Moi azefazeze</p>
+    				<p><a class="action_modif" href="">Modifier</a><a class="action_deco" href="">Déconnexion</a></p>
+   				</div>
+    		</div>
+    		
+    		<div id="btns">
+    		
+      			<button type="button" class="button">
+      				<span>Survoler!</span>
+      			</button>
+      			
+    		</div>
+    		
+    		<p class="sep2"></p>
+    		
+    	</div>
+    </aside>
+    <aside class="body">
+    {% block body %}
+    {% endblock %}
+    </aside>
+</body>
+</html>
